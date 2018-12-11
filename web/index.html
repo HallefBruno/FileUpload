@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>File upload</title>
     </head>
-    <body>
-        <form action="UploadDownloadFileServlet" method="post" enctype="multipart/form-data">
-            Select File to Upload:<input type="file" name="fileName">
+    <body><!--UploadDownloadFileServlet-->
+        <form action="upload" method="post" enctype="multipart/form-data">
+            Select File to Upload:<input type="file" name="file"> <!--fileName-->
             <br>
             <input type="submit" value="Upload">
         </form>
