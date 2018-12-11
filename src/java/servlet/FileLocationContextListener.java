@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 public class FileLocationContextListener implements ServletContextListener {
 
+    @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         String rootPath = System.getProperty("catalina.home");
         ServletContext ctx = servletContextEvent.getServletContext();
@@ -23,6 +24,7 @@ public class FileLocationContextListener implements ServletContextListener {
         ctx.setAttribute("FILES_DIR", rootPath + File.separator + relativePath);
     }
 
+    @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         //do cleanup if needed
     }
